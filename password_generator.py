@@ -32,6 +32,11 @@ def main():
 
     # Prompt for master password
     master_password = prompt_password("Enter your master password: ")
+
+    if master_password.lower() != master_password:
+        print("Error: Password is not lower case")
+        sys.exit(1)
+
     confirm_password = prompt_password("Confirm your master password: ")
 
     # Verify the master password
@@ -43,6 +48,9 @@ def main():
     site_name = input("Enter the website or service name: ").strip()
     if not site_name:
         print("Error: Site name cannot be empty.")
+        sys.exit(1)
+    if site_name.lower() != site_name:
+        print("Error: Site name is not lower case")
         sys.exit(1)
 
     # Generate the password
