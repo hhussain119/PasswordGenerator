@@ -19,12 +19,12 @@ def generate_password(master_password, site_name):
     hash_object = hashlib.sha256(combined_input.encode())
     hashed_password = hash_object.hexdigest()  # Hexadecimal output
 
-    # Take the first 12 characters of the hash, and append a fixed uppercase letter and symbol
-    base_password = hashed_password[:12]
+    # Take the first 10 characters of the hash, and append a fixed uppercase letter and symbol
+    base_password = hashed_password[:10]
 
     final_password = f"{base_password}A@"
 
-    # Ensure the length is exactly 16 characters
+    # Ensure the length is exactly 12 characters
     return final_password
 
 def main():

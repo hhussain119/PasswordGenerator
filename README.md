@@ -17,7 +17,7 @@ This script generates **deterministic passwords** based on a master password and
 
 1. The script combines the master password and the site name.
 2. It hashes the combination using `SHA-256`.
-3. The first 12 characters of the hash are used as the base for the password.
+3. The first 10 characters of the hash are used as the base for the password.
 4. A fixed uppercase letter (`A`) and a symbol (`@`) are appended to ensure compliance with character requirements.
 
 ---
@@ -29,4 +29,4 @@ This script generates **deterministic passwords** based on a master password and
 - Site Name: `amazon`
 
 **Output**:
-- a1b2c3d4e5f6g7A@
+- a1b2c3d4e5f6A@
